@@ -10,7 +10,7 @@
 
 ## Результат нагрузочного тестирования
 
-```ab -n 50000 -c 100 -r http://localhost:8080/```
+```ab -n 50000 -c 100 -r http://localhost:8080/httptest/wikipedia_russia.html```
 
 ```
 This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
@@ -35,36 +35,35 @@ Server Software:        plhome/1.0
 Server Hostname:        localhost
 Server Port:            8080
 
-Document Path:          /
-Document Length:        0 bytes
+Document Path:          /httptest/wikipedia_russia.html
+Document Length:        954824 bytes
 
 Concurrency Level:      100
-Time taken for tests:   6497.737 seconds
+Time taken for tests:   102.798 seconds
 Complete requests:      50000
 Failed requests:        0
-Non-2xx responses:      50000
-Total transferred:      5085875 bytes
-HTML transferred:       0 bytes
-Requests per second:    7.69 [#/sec] (mean)
-Time per request:       12995.473 [ms] (mean)
-Time per request:       129.955 [ms] (mean, across all concurrent requests)
-Transfer rate:          0.76 [Kbytes/sec] received
+Total transferred:      47748640440 bytes
+HTML transferred:       47741200000 bytes
+Requests per second:    486.39 [#/sec] (mean)
+Time per request:       205.596 [ms] (mean)
+Time per request:       2.056 [ms] (mean, across all concurrent requests)
+Transfer rate:          453604.00 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.4      0      15
-Processing:   500 12947 15025.5   5491   49672
-Waiting:      500 12947 15025.6   5490   49672
-Total:        500 12947 15025.5   5491   49672
+Connect:        0    0   6.5      0    1021
+Processing:     2  205 187.2    231     497
+Waiting:        1  198 188.5    163     492
+Total:          2  205 187.4    234    1420
 
 Percentage of the requests served within a certain time (ms)
-  50%   5491
-  66%   7906
-  75%  26646
-  80%  34820
-  90%  39624
-  95%  41187
-  98%  43222
-  99%  44732
- 100%  49672 (longest request)
+  50%    234
+  66%    382
+  75%    391
+  80%    396
+  90%    409
+  95%    420
+  98%    440
+  99%    455
+ 100%   1420 (longest request)
 ```
